@@ -1,5 +1,5 @@
 CUDA_INSTALL_PATH ?= /usr/local/cuda
-VER := -4.9
+VER := -5
 
 CXX := /usr/bin/g++$(VER)
 CC := /usr/bin/gcc$(VER)
@@ -25,8 +25,8 @@ CFLAGS += $(COMMONFLAGS)
 
 
 
-CUDA_OBJS = bitonic_sort.ptx 
-OBJS = demo.cpp.o bitonic_sort.cpp.o
+CUDA_OBJS = odd_even.ptx 
+OBJS = demo.cpp.o odd_even.cpp.o
 TARGET = solution.x
 LINKLINE = $(LINK) -o $(TARGET) $(OBJS) $(LIB_CUDA)
 
